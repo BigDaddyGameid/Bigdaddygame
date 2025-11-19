@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Big Daddy Game - Colour Prediction Entertainment</title>
+  <title>Big Daddy Game - Colour Prediction</title>
   <style>
     * {
       margin: 0;
@@ -13,8 +13,8 @@
     }
 
     body {
-      background: linear-gradient(135deg, #1a0033, #2d0b4d);
-      color: #fff;
+      background: #000000;               /* Pure Black Background */
+      color: #ffffff;
       line-height: 1.7;
     }
 
@@ -26,10 +26,10 @@
 
     header {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       background: url('https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=1200&q=80') center/cover no-repeat;
       border-radius: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       position: relative;
     }
 
@@ -37,21 +37,21 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.75);
       border-radius: 20px;
     }
 
     header h1 {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       color: #d9ac4f;
       position: relative;
       z-index: 2;
     }
 
     header p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       max-width: 800px;
-      margin: 20YHpx auto;
+      margin: 20px auto;
       position: relative;
       z-index: 2;
     }
@@ -59,35 +59,45 @@
     .btn-primary {
       display: inline-block;
       background: #d9ac4f;
-      color: #1a0033;
-      padding: 15px 40px;
+      color: #000;
+      padding: 16px 45px;
       font-size: 1.3rem;
       font-weight: bold;
       border-radius: 50px;
       text-decoration: none;
       margin-top: 20px;
-      transition: 0.3s;
+      transition: all 0.3s;
       position: relative;
       z-index: 2;
     }
 
     .btn-primary:hover {
       background: #f0c97a;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(217, 172, 79, 0.4);
     }
 
-    h2, h3 {
+    h2 {
       color: #d9ac4f;
-      margin: 40px 0 20px;
+      margin: 50px 0 25px;
       text-align: center;
+      font-weight: 700;
+    }
+
+       h3 {
+      color: #d9ac4f;
+      margin: 50px 0 25px;
+      text-align: center;
+      font-weight: 600;
+     font-size: 24px;
     }
 
     section {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       padding: 40px;
-      border-radius: 15px;
-      margin-bottom: 30px;
-      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      margin-bottom: 35px;
+      border: 1px solid rgba(217, 172, 79, 0.2);
     }
 
     ul {
@@ -96,13 +106,17 @@
     }
 
     li {
-      margin: 18px 0;
+      margin: 16px 0;
       padding-left: 10px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      position: relative;
     }
 
-    li strong {
+    li::before {
+      content: "✔";
       color: #d9ac4f;
+      font-weight: bold;
+      margin-right: 10px;
     }
 
     .features {
@@ -113,39 +127,37 @@
     }
 
     .feature-item {
-      background: rgba(255,255,255,0.15);
-      padding: 25px;
+      background: rgba(217, 172, 79, 0.1);
+      padding: 30px 20px;
       border-radius: 15px;
       text-align: center;
-      transition: 0.3s;
+      border: 1px solid rgba(217, 172, 79, 0.3);
+      transition: 0.4s;
     }
 
     .feature-item:hover {
-      transform: translateY(-10px);
       background: rgba(217, 172, 79, 0.2);
-    }
-
-    .feature-item h3 {
-      font-size: 1.4rem;
-      margin: 15px 0;
+      transform: translateY(-12px);
+      border-color: #d9ac4f;
     }
 
     .emoji {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3.5rem;
+      margin-bottom: 15px;
     }
 
     footer {
       text-align: center;
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.5);
-      margin-top: 50px;
-      border-radius: 15px;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      margin-top: 70px;
+      border-top: 2px solid #d9ac4f;
     }
 
     @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      .btn-primary { padding: 12px 30px; font-size: 1.1rem; }
+      header h1 { font-size: 2.8rem; }
+      .btn-primary { padding: 14px 35px; font-size: 1.2rem; }
+      section { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -153,21 +165,24 @@
 
   <div class="container">
 
+    <!-- Header -->
     <header>
       <h1>Welcome to Big Daddy Game</h1>
       <p>Your Colour Prediction Entertainment Zone</p>
-      <a href="#" class="btn-primary">Big daddy game login </a>
+    
     </header>
 
+    <!-- Main Content -->
     <section>
       <p>Big Daddy Game is a fun, fast-paced, and interactive colour prediction platform created for users who enjoy light, instinct-based gameplay. Designed with simplicity, speed, and entertainment in mind, Big Daddy Game offers a refreshing digital experience where players can explore colourful challenges, test their intuition, and enjoy a visually rich interface.</p>
       <br>
       <p>From beginners exploring colour prediction for the first time to regular players who enjoy quick and engaging challenges, Big Daddy Game provides a stable, user-friendly environment ideal for everyone. Our platform is built around vibrant visuals, fast loading times, and clean navigation, ensuring every user enjoys a smooth and satisfying experience.</p>
       <br>
+       <a href="#" class="btn-primary">Big daddy game login</a>
       <p>At Big Daddy Game, we believe entertainment should be simple but engaging. That’s why we’ve created a colour prediction game that brings excitement to every round. Pick your preferred colour, follow the patterns, and dive into an entertaining world of prediction-based fun.</p>
     </section>
 
-    <h2>🌈 Why Big Daddy Game Stands Out</h2>
+    <h2>Why Big Daddy Game Stands Out</h2>
     <section>
       <p>Big Daddy Game has quickly become a popular choice for colour prediction enthusiasts thanks to its clean design, flexibility, and exciting gameplay mechanics. With our platform, users can enjoy:</p>
       <ul>
@@ -178,10 +193,10 @@
         <li>Vibrant colours and dynamic animations</li>
         <li>Easy access anytime, anywhere</li>
       </ul>
-      <p style="margin-top:20px;">Every minute on Big Daddy Game brings something interesting. Whether you’re taking a short break, relaxing after work, or exploring games based on intuition, Big Daddy Game ensures a refreshing and entertaining colour prediction experience.</p>
+      <p style="margin-top:25px;">Every minute on Big Daddy Game brings something interesting. Whether you’re taking a short break, relaxing after work, or exploring games based on intuition, Big Daddy Game ensures a refreshing and entertaining colour prediction experience.</p>
     </section>
 
-    <h2>🎮 How Big Daddy Game Works</h2>
+    <h2>How Big Daddy Game Works</h2>
     <section>
       <p>Big Daddy Game is built around the idea of simple colour prediction. Here’s how the experience flows:</p>
       <ul>
@@ -190,44 +205,44 @@
         <li>Watch the result appear</li>
         <li>Continue exploring new rounds</li>
       </ul>
-      <p>The easy-to-follow process makes Big Daddy Game suitable for players of all experience levels. Its focus on fast rounds ensures users stay engaged and intrigued throughout their gameplay experience.</p>
+      <p>The easy-to-follow process makes Big Daddy Game suitable for players of all experience levels.</p>
       <br>
       <div style="text-align:center;">
-        <a href="#" class="btn-primary">🚀 Start Playing Now</a>
+        <a href="#" class="btn-primary">Start Playing Now</a>
       </div>
     </section>
 
-    <h2>⭐ FEATURES OF BIG DADDY GAME</h2>
+    <h2>FEATURES OF BIG DADDY GAME</h2>
     <div class="features">
       <div class="feature-item">
-        <div class="emoji">🎨</div>
+        <div class="emoji">Intuitive Colour Prediction Gameplay</div>
         <h3>Intuitive Colour Prediction Gameplay</h3>
         <p>Simplifies entertainment with easy-to-understand colour selection and result mechanics.</p>
       </div>
       <div class="feature-item">
-        <div class="emoji">⚡</div>
+        <div class="emoji">Fast Round Cycles</div>
         <h3>Fast Round Cycles</h3>
         <p>Quick, energetic rounds — never wait long to play again!</p>
       </div>
       <div class="feature-item">
-        <div class="emoji">📱</div>
+        <div class="emoji">Fully Optimised for All Devices</div>
         <h3>Fully Optimised for All Devices</h3>
         <p>Works perfectly on phones, tablets, and computers.</p>
       </div>
       <div class="feature-item">
-        <div class="emoji">🔒</div>
+        <div class="emoji">Secure & Reliable Platform</div>
         <h3>Secure & Reliable Platform</h3>
         <p>Stable, fast, and built with performance in mind.</p>
       </div>
       <div class="feature-item">
-        <div class="emoji">🌟</div>
+        <div class="emoji">Engaging Visual Design</div>
         <h3>Engaging Visual Design</h3>
         <p>Bright themes, smooth animations, and attractive layouts.</p>
       </div>
       <div class="feature-item">
-        <div class="emoji">🧠</div>
+        <div class="emoji">Pattern and Observation Based</div>
         <h3>Pattern and Observation Based</h3>
-        <p>Test your instincts and enjoy trend-watching fun.</pN>
+        <p>Test your instincts and enjoy trend-watching fun.</p>
       </div>
     </div>
 
@@ -242,13 +257,13 @@
       <p>Join thousands who enjoy colour-based games every day. Your entertainment is just one tap away!</p>
       <br>
       <div style="text-align:center;">
-        <a href="#" class="btn-primary">Join Big Daddy Game Now 🎉</a>
+        <a href="#" class="btn-primary">Join Big Daddy Game Now</a>
       </div>
     </section>
 
     <footer>
       <p>&copy; 2025 Big Daddy Game – Your Ultimate Colour Prediction Zone</p>
-      <p>Made with 🌈 and excitement</p>
+      <p>Made with passion and excitement</p>
     </footer>
 
   </div>
